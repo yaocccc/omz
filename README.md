@@ -17,8 +17,6 @@ fork自 oh my zsh，更纯净 更快速
 ## UPDATE
 
 ```plaintext
-  git submodule update
-  或者
   cd $OMZ && git pull
 ```
 
