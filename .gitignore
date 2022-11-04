@@ -1,0 +1,11 @@
+.idea/
+.vscode/
+node_modules/
+dist/
+tmp/
+temp/
+logs/
+*.log
+**/dump.rdb
+**/.DS_Store
+auth.json
