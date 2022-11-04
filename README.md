@@ -26,7 +26,7 @@ fork自 oh my zsh，更纯净 更快速
 - fzf
 - fd
 - bat (可选 更好的文本预览效果)
-- exa (可选 更好的ls预览效果)
+- exa (可选 更好的目录预览效果)
 
 ```plaintext
   请自行安装fd
