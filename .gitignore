@@ -8,4 +8,4 @@ logs/
 *.log
 **/dump.rdb
 **/.DS_Store
-auth.json
+cache/
