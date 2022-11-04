@@ -42,7 +42,7 @@ fork自 oh my zsh，更纯净 更快速
 
 ## PLUGINS
 
-1. z  
+1. z.lua
     > `z keyword`  
     > 按使用频率跳转到keyword关联目录  
     > 例如 `z zsh` 可快速跳转到 `~/.config/zsh` 目录  
