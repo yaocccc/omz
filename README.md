@@ -1,4 +1,4 @@
-# OMZ
+# O╦╗
 
 fork自 oh my zsh，更纯净 更快速
 
