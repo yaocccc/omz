@@ -2,7 +2,7 @@ alias fzf='fzf --preview "bat -p --color=always {} | head -100" --height 40%'
 
 export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --history=$OMZ/cache/fzfhistory"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
-export FZF_PREVIEW_COMMAND='$OMZ/lib/file_preview.sh {}'
+export FZF_PREVIEW_COMMAND='bash $OMZ/lib/file_preview.sh {}'
 
 zstyle ':completion:complete:*:options' sort false
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
