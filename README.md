@@ -2,6 +2,8 @@
 
 fork自 oh my zsh，更纯净 更快速
 
+![avatar](./screenshots/show.gif)
+
 ## USAGE
 
 ```shell
@@ -101,5 +103,3 @@ omz
   ├── omz.zsh             -- 配置入口
   └── README.md           -- README
 ```
-
-![avatar](./screenshots/show.gif)
