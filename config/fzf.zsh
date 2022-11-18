@@ -1,5 +1,3 @@
-alias fzf='bash $OMZ/lib/get_cursor.sh; fzf --preview "bash $OMZ/lib/file_preview.sh {}" --height 12'
-
 export FZF_DEFAULT_OPTS="--height 12 --layout=reverse --history=$OMZ/cache/fzfhistory"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
 export FZF_PREVIEW_COMMAND='bash $OMZ/lib/file_preview.sh {}'
