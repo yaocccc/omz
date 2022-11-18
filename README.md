@@ -27,6 +27,7 @@ fork自 oh my zsh，更纯净 更快速
 - fd
 - bat (可选 更好的文本预览效果)
 - exa (可选 更好的目录预览效果)
+- ueberzug (可选 可在x11终端下预览图片)
 
 ```plaintext
   请自行安装fd
@@ -88,6 +89,7 @@ omz
   ├── cache/              -- 部分需要缓存的配置
   ├── lib/                -- 部分依赖文件
   │   ├── omz.sh          -- omz.sh
+  │   ├── img_preview.sh  -- 图片预览脚本 for fzf
   │   └── file_preview.sh -- 文件预览脚本 for fzf
   ├── config/
   │   ├── fzf.zsh         -- fzf 及 fzf-tab配置

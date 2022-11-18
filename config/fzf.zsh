@@ -1,6 +1,6 @@
-alias fzf='fzf --preview "bat -p --color=always {} | head -100" --height 40%'
+alias fzf='fzf --preview "bash $OMZ/lib/file_preview.sh {}" --height 12'
 
-export FZF_DEFAULT_OPTS="--height 50% --layout=reverse --history=$OMZ/cache/fzfhistory"
+export FZF_DEFAULT_OPTS="--height 12 --layout=reverse --history=$OMZ/cache/fzfhistory"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
 export FZF_PREVIEW_COMMAND='bash $OMZ/lib/file_preview.sh {}'
 
@@ -17,4 +17,5 @@ zstyle ':fzf-tab:complete:git-log:*' fzf-preview 'git log --color=always $word'
 zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word'
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'less ${(Q)realpath}'
+zstyle ':fzf-tab:complete:*:*' fzf-flags --height=12
 export LESSOPEN='| bash $OMZ/lib/file_preview.sh %s'
