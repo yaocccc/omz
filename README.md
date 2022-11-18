@@ -1,3 +1,15 @@
+<!-- markdown-toc GFM -->
+
+* [o╦╗](#o)
+  * [USAGE](#usage)
+  * [UPDATE](#update)
+  * [REQUIRES](#requires)
+  * [CONFIGURATION](#configuration)
+  * [PLUGINS](#plugins)
+  * [FILE TREE](#file-tree)
+
+<!-- markdown-toc -->
+
 # o╦╗
 
 fork自 oh my zsh，更纯净 更快速
@@ -84,7 +96,7 @@ _OMZ_APPLY_CHPWD_HOOK
 5. fzf-tab  
     > tab时使用fzf进行候选选择  
 
-## 配置目录结构
+## FILE TREE
 
 ```plaintext
 omz
