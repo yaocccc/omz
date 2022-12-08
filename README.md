@@ -62,13 +62,13 @@ fork自 oh my zsh，更纯净 更快速
 
 _OMZ_APPLY_PREEXEC_HOOK
   是否允许OMZ开启"命令发生前"相关hook
-  默认true
+  默认false
   行为:
     1. 执行命令前 将修改当前终端会话的title为: $cmd
 
 _OMZ_APPLY_CHPWD_HOOK
   是否允许OMZ开启"pwd变更后"相关hook
-  默认true
+  默认false
   行为:
     1. 载入时，会自动切换到上一次cd过的目录
     2. 发生cd命令时，自动记录当前cd的目录(在缓存文件中)

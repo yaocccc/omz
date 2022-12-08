@@ -12,5 +12,5 @@ _apply_chpwd_hook() {
     [ -d "$currentdir" ] && cd $currentdir
 }
 
-[ "$_OMZ_APPLY_PREEXEC_HOOK" != "false" ] && _apply_preexec_hook
-[ "$_OMZ_APPLY_CHPWD_HOOK" != "false" ] && _apply_chpwd_hook
+[ "$_OMZ_APPLY_PREEXEC_HOOK" == "true" ] && _apply_preexec_hook
+[ "$_OMZ_APPLY_CHPWD_HOOK" == "true" ] && _apply_chpwd_hook
