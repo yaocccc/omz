@@ -19,13 +19,11 @@ fork自 oh my zsh，更纯净 更快速
 ## USAGE
 
 ```shell
+  # 找一个地方clone本仓库 例如 ~/.config
+  git clone https://github.com/yaocccc/omz
 
-  # 进入你的zsh配置目录 例如 ~/.config/zsh
-  cd ~/.config/zsh
-  git submodule add https://github.com/yaocccc/omz
-
-  # 在你的zsh配置里 source ~/.config/zsh/omz/omz.zsh (举例)
-  echo "source $ZSH/omz/omz.zsh" >> $ZSH/init.zsh
+  # 在你的zsh配置里 source ~/.config/omz/omz.zsh (举例)
+  echo "source ~/config/omz/omz.zsh" >> $ZSH/init.zsh
 ```
 
 ## UPDATE

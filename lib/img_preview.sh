@@ -19,6 +19,7 @@ function finalise {
         rm "${UEBERZUG_FIFO}"
     &>/dev/null \
         kill $(jobs -p)
+    killall ueberzug
 }
 
 function draw_preview {
