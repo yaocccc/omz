@@ -94,6 +94,28 @@ _OMZ_APPLY_CHPWD_HOOK
 5. fzf-tab  
     > tab时使用fzf进行候选选择  
 
+6. 常用git命令支持(非插件)
+    > `gco` = `git checkout`  
+    > `gpo` = `git push origin <当前分支>`  
+    > `gpl` = `git pull origin <当前分支>`  
+    > `gd` = `git diff`  
+    > `gs` = `git status`  
+    > `gss` = `更简洁的 git status`  
+    > `gam` = `git add all 并 git commit -m '内容'`, e.g. `git commit update readme`  
+    > `gll` = `简洁打印 git log`, 默认展示10条 若想展示更多 `gll 100`  
+    > `glll` = `详细打印 git log`, 默认展示10条 若想展示更多 `glll 100`  
+    >> 展示 glll效果如下 PS: 实际使用带颜色 可自行根据 [此文件:git.zsh](https://github.com/yaocccc/omz/blob/master/config/git.zsh) 内容配置对应颜色
+    >> 
+    >> $ glll  
+    >> \* e797da3 2022-12-14 15:18 user1: fix: 透传减轻下游负载  
+    >> \* ed8a8ba 2022-12-14 14:41 user1: fix: 查询时透传id  
+    >> \*   7c2799b 2022-12-13 19:04 user1: Merge branch 'abc' into 'master'  
+    >> |\  
+    >> | * 3f2441b 2022-12-13 19:01 user1: fix: 修复安全隐患
+    >> |/  
+    >> \*   70a46da 2022-12-13 18:27 user2: Merge branch 'fix/abcd' into 'master'  
+
+
 ## FILE TREE
 
 ```plaintext
