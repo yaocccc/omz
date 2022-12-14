@@ -1,6 +1,5 @@
 export GIT_TERMINAL_PROMPT=1
 
-alias git='git --no-pager'
 alias gco='git checkout'
 alias gpo='git push origin $(git symbolic-ref --short -q HEAD)'
 alias gpl='git pull origin $(git symbolic-ref --short -q HEAD) --ff-only'
