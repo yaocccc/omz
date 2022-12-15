@@ -1,3 +1,5 @@
+# FORK FROM OH MY ZSH
+
 ZSH_CACHE_DIR="$OMZ/cache"
 SHORT_HOST=${HOST/.*/}
 autoload -Uz add-zsh-hook

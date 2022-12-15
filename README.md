@@ -1,12 +1,13 @@
 <!-- markdown-toc GFM -->
 
 * [o╦╗](#o)
+* [FUTURES](#futures)
   * [USAGE](#usage)
   * [UPDATE](#update)
+  * [FILE TREE](#file-tree)
   * [REQUIRES](#requires)
   * [CONFIGURATION](#configuration)
   * [PLUGINS](#plugins)
-  * [FILE TREE](#file-tree)
 
 <!-- markdown-toc -->
 
@@ -16,6 +17,16 @@ fork自 oh my zsh，更纯净 更快速
 
 ![avatar](./screenshots/show.gif)
 
+# FUTURES
+
+- 快速跳转到目录 `z dirname` 可用tab补全
+- fzf-tab支持 使用fzf取代原生tab候选、预览
+- 输入命令过程中展示最近使用同开头的命令 右键采用
+- 高亮输入命令 绿色正确 红色错误
+- `extract` 命令解压任意格式压缩文件
+- 选择性开启hook，可实现新开终端自动进入最后进入的目录 `export _OMZ_APPLY_CHPWD_HOOK=true`
+- 常用git快捷命令集成
+
 ## USAGE
 
 ```shell
@@ -24,12 +35,34 @@ fork自 oh my zsh，更纯净 更快速
 
   # 在你的zsh配置里 source ~/.config/omz/omz.zsh (举例)
   echo "source ~/config/omz/omz.zsh" >> $ZSH/init.zsh
+
+  # 请务必安装fzf和lua 依赖
 ```
 
 ## UPDATE
 
 ```plaintext
   cd $OMZ && git pull
+```
+
+## FILE TREE
+
+```plaintext
+omz
+  ├── cache/              -- 部分需要缓存的配置
+  ├── lib/                -- 部分依赖文件
+  │   ├── omz.sh          -- omz.sh
+  │   ├── img_preview.sh  -- 图片预览脚本 for fzf
+  │   └── file_preview.sh -- 文件预览脚本 for fzf
+  ├── config/
+  │   ├── fzf.zsh         -- fzf 及 fzf-tab配置
+  │   ├── git.zsh         -- git相关配置
+  │   ├── hook.zsh        -- 命令或启动钩子配置
+  │   └── omz.zsh         -- omz基础配置
+  ├── plugins/            -- 插件
+  ├── themes/             -- 主题
+  ├── omz.zsh             -- 配置入口
+  └── README.md           -- README
 ```
 
 ## REQUIRES
@@ -114,24 +147,3 @@ _OMZ_APPLY_CHPWD_HOOK
     >> | * 3f2441b 2022-12-13 19:01 user1: fix: 修复安全隐患
     >> |/  
     >> \*   70a46da 2022-12-13 18:27 user2: Merge branch 'fix/abcd' into 'master'  
-
-
-## FILE TREE
-
-```plaintext
-omz
-  ├── cache/              -- 部分需要缓存的配置
-  ├── lib/                -- 部分依赖文件
-  │   ├── omz.sh          -- omz.sh
-  │   ├── img_preview.sh  -- 图片预览脚本 for fzf
-  │   └── file_preview.sh -- 文件预览脚本 for fzf
-  ├── config/
-  │   ├── fzf.zsh         -- fzf 及 fzf-tab配置
-  │   ├── git.zsh         -- git相关配置
-  │   ├── hook.zsh        -- 命令或启动钩子配置
-  │   └── omz.zsh         -- omz基础配置
-  ├── plugins/            -- 插件
-  ├── themes/             -- 主题
-  ├── omz.zsh             -- 配置入口
-  └── README.md           -- README
-```
