@@ -4,7 +4,7 @@ category=${mime%%/*}
 if [ -d "$1" ]; then
     exa -l --no-user --no-time --icons "$1" 2>/dev/null || ls --color=always "$1" 2>/dev/null || ls -G "$1"
 elif [ "$category" = text ]; then
-    (bat -p --color=always "$1" || cat "$1") 2>/dev/null | head -100
+    (bat -p --color=always "$1" || cat "$1") 2>/dev/null | head -1000
 elif [ "$category" = image ]; then
     command -v ueberzug 2&>/dev/null && bash $OMZ/lib/img_preview.sh "$1"|| img2txt "$1"
 else 

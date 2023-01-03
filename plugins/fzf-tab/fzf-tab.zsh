@@ -8,10 +8,10 @@
 # thanks Valodim/zsh-capture-completion
 -ftb-compadd() {
   # parse all options
-  local -A apre hpre dscrs _oad
+  local -A apre hpre dscrs _oad _mesg
   local -a isfile _opts __ expl
   zparseopts -E -a _opts P:=apre p:=hpre d:=dscrs X+:=expl O:=_oad A:=_oad D:=_oad f=isfile \
-             i: S: s: I: x: r: R: W: F: M+: E: q e Q n U C \
+             i: S: s: I: x:=_mesg r: R: W: F: M+: E: q e Q n U C \
              J:=__ V:=__ a=__ l=__ k=__ o=__ 1=__ 2=__
 
   # store $curcontext for further usage
@@ -34,6 +34,9 @@
   builtin compadd -A __hits -D __dscr "$@"
   local ret=$?
   if (( $#__hits == 0 )); then
+    if is-at-least 5.9 && (( $#_mesg != 0 )); then
+      builtin compadd -x $mesg
+    fi
     return $ret
   fi
 
@@ -208,7 +211,6 @@ fzf-tab-debug() {
 }
 
 fzf-tab-complete() {
-  bash $OMZ/lib/get_cursor.sh
   # this name must be ugly to avoid clashes
   local -i _ftb_continue=1 _ftb_continue_last=0 _ftb_accept=0 ret=0
   # hide the cursor until finishing completion, so that users won't see cursor up and down
@@ -337,16 +339,16 @@ toggle-fzf-tab() {
 }
 
 build-fzf-tab-module() {
-  local MACOS
+  local use_bundle
   local NPROC
   if [[ ${OSTYPE} == darwin* ]]; then
-    MACOS=true
+    [[ -n ${module_path[1]}/**/*.bundle(#qN) ]] && use_bundle=true
     NPROC=$(sysctl -n hw.logicalcpu)
   else
     NPROC=$(nproc)
   fi
   pushd $FZF_TAB_HOME/modules
-  CPPFLAGS=-I/usr/local/include CFLAGS="-g -Wall -O2" LDFLAGS=-L/usr/local/lib ./configure --disable-gdbm --without-tcsetpgrp ${MACOS:+DL_EXT=bundle}
+  CPPFLAGS=-I/usr/local/include CFLAGS="-g -Wall -O2" LDFLAGS=-L/usr/local/lib ./configure --disable-gdbm --without-tcsetpgrp ${use_bundle:+DL_EXT=bundle}
   make -j${NPROC}
   local ret=$?
   popd
@@ -377,9 +379,11 @@ typeset -ga _ftb_group_colors=(
 () {
   emulate -L zsh -o extended_glob
 
-  fpath+=($FZF_TAB_HOME/lib)
+  if (( ! $fpath[(I)$FZF_TAB_HOME/lib] )); then
+    fpath+=($FZF_TAB_HOME/lib)
+  fi
 
-  autoload -Uz -- $FZF_TAB_HOME/lib/-#ftb*(:t)
+  autoload -Uz is-at-least -- $FZF_TAB_HOME/lib/-#ftb*(:t)
 
   if (( $+FZF_TAB_COMMAND || $+FZF_TAB_OPTS || $+FZF_TAB_QUERY || $+FZF_TAB_SINGLE_GROUP || $+fzf_tab_preview_init )) \
        || zstyle -m ":fzf-tab:*" command '*' \
