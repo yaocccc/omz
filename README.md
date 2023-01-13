@@ -23,7 +23,7 @@ fork自 oh my zsh，更纯净 更快速
 - fzf-tab支持 使用fzf取代原生tab候选、预览
 - 输入命令过程中展示最近使用同开头的命令 右键采用
 - 高亮输入命令 绿色正确 红色错误
-- `extract` 命令解压任意格式压缩文件
+- `extract` 或 `x` 命令解压任意格式压缩文件
 - 选择性开启hook，可实现新开终端自动进入最后进入的目录 `export _OMZ_APPLY_CHPWD_HOOK=true`
 - 常用git快捷命令集成
 
@@ -113,7 +113,7 @@ _OMZ_APPLY_CHPWD_HOOK
     > 例如 `z zsh` 可快速跳转到 `~/.config/zsh` 目录  
 
 2. extract  
-    > `extract xxx`  
+    > `extract xxx` 或 `x xxx`  
     > extract一个压缩文件  
     > 可根据不同压缩文件类型进行解压 无需记忆长解压指令  
 
