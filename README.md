@@ -8,6 +8,7 @@
   * [REQUIRES](#requires)
   * [CONFIGURATION](#configuration)
   * [PLUGINS](#plugins)
+  * [贡献者](#贡献者)
 
 <!-- markdown-toc -->
 
@@ -147,3 +148,9 @@ _OMZ_APPLY_CHPWD_HOOK
     >> | * 3f2441b 2022-12-13 19:01 user1: fix: 修复安全隐患
     >> |/  
     >> \*   70a46da 2022-12-13 18:27 user2: Merge branch 'fix/abcd' into 'master'  
+
+## 贡献者
+
+- [yaocccc](https://github.com/YichaoDeng)
+- [YichaoDeng](https://github.com/YichaoDeng)
+  - [PR#1 更新gitlog的format格式](https://github.com/yaocccc/omz/pull/1)
