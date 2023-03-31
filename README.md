@@ -9,7 +9,7 @@
   * [CONFIGURATION](#configuration)
   * [PLUGINS](#plugins)
   * [贡献者](#贡献者)
-  * [Support](#support)
+  * [Support: buy me a coffee](#support-buy-me-a-coffee)
 
 <!-- markdown-toc -->
 
@@ -156,14 +156,8 @@ _OMZ_APPLY_CHPWD_HOOK
 - [YichaoDeng](https://github.com/YichaoDeng)
   - [PR#1 更新gitlog的format格式](https://github.com/yaocccc/omz/pull/1)
 
-## Support
+## Support: buy me a coffee
 
 <a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
   <img src="https://github.com/yaocccc/yaocccc/raw/master/qr.png">
-</a>
-
-<br>
-
-<a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
-  <img src="https://cdn.buymeacoffee.com/buttons/v2/default-violet.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 200px !important;" >
 </a>
