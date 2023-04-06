@@ -158,6 +158,6 @@ _OMZ_APPLY_CHPWD_HOOK
 
 ## Support: buy me a coffee
 
-<a href="https://www.buymeacoffee.com/yaocccc" target="_blank">
+<a href="#TOP" target="_blank">
   <img src="https://github.com/yaocccc/yaocccc/raw/master/qr.png">
 </a>
