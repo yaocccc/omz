@@ -1,5 +1,5 @@
 export RUNEWIDTH_EASTASIAN=0
-export FZF_DEFAULT_OPTS="--height 12 --scrollbar=▌▐ --info=inline-right --margin=1 --layout=reverse --history=$OMZ/cache/fzfhistory"
+export FZF_DEFAULT_OPTS="--height 12 --scrollbar=▌▐ --info=inline-right --layout=reverse --history=$OMZ/cache/fzfhistory"
 export FZF_DEFAULT_COMMAND="fd --exclude={.git,.idea,.vscode,.sass-cache,node_modules,build,dist,vendor} --type f"
 export FZF_PREVIEW_COMMAND='bash $OMZ/lib/file_preview.sh {}'
 
@@ -22,3 +22,17 @@ zstyle ':fzf-tab:complete:git-show:*' fzf-preview 'git show --color=always $word
 zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview '[ -f "$realpath" ] && git diff --color=always $word || git log --color=always $word'
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'bash $OMZ/lib/file_preview.sh ${(Q)realpath}'
 zstyle ':fzf-tab:complete:*:*' fzf-flags --height=12
+
+_apply_historybyfzf() {
+    function historybyfzf (){
+        if [ $#LBUFFER -gt 0 ]; then
+            BUFFER=$(history -n | awk '!seen [$0]++' | fzf --query $LBUFFER)
+        else
+            BUFFER=$(history -n | awk '!seen [$0]++' | fzf)
+        fi
+        CURSOR=$#BUFFER
+        zle redisplay
+    }
+    zle -N historybyfzf
+    bindkey '^r' historybyfzf
+}

@@ -11,6 +11,3 @@ _apply_chpwd_hook() {
     currentdir=$(cat $OMZ/cache/currentdir 2>/dev/null)
     [ -d "$currentdir" ] && cd $currentdir
 }
-
-[ "$_OMZ_APPLY_PREEXEC_HOOK" = "true" ] && _apply_preexec_hook
-[ "$_OMZ_APPLY_CHPWD_HOOK" = "true" ] && _apply_chpwd_hook

@@ -2,14 +2,14 @@
 
 * [o╦╗](#o)
 * [FUTURES](#futures)
-  * [USAGE](#usage)
-  * [UPDATE](#update)
-  * [FILE TREE](#file-tree)
-  * [REQUIRES](#requires)
-  * [CONFIGURATION](#configuration)
-  * [PLUGINS](#plugins)
-  * [贡献者](#贡献者)
-  * [Support: buy me a coffee](#support-buy-me-a-coffee)
+    * [USAGE](#usage)
+    * [UPDATE](#update)
+    * [FILE TREE](#file-tree)
+    * [REQUIRES](#requires)
+    * [CONFIGURATION](#configuration)
+    * [PLUGINS](#plugins)
+    * [贡献者](#贡献者)
+    * [Support: buy me a coffee](#support-buy-me-a-coffee)
 
 <!-- markdown-toc -->
 
@@ -105,6 +105,10 @@ _OMZ_APPLY_CHPWD_HOOK
   行为:
     1. 载入时，会自动切换到上一次cd过的目录
     2. 发生cd命令时，自动记录当前cd的目录(在缓存文件中)
+
+_OMZ_APPLY_HISTORYBYFZF
+  是否允许fzf管理ctrl_r快捷键
+  默认true
 ```
 
 ## PLUGINS
