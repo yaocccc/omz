@@ -12,6 +12,7 @@ alias gpl='git pull origin $(git symbolic-ref --short -q HEAD) --ff-only'
 alias gd='git --no-pager diff'
 alias gs='git --no-pager status'
 alias gss='git --no-pager status -s'
+alias gsh='git --no-pager show'
 alias gpt='git push origin --tags'
 alias glt='git tag -n --sort=taggerdate | tail -n ${1-10}'
 gat() { git tag -a $1 -m "$2" }
