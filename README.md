@@ -36,7 +36,7 @@ fork自 oh my zsh，更纯净 更快速
   git clone https://github.com/yaocccc/omz ~/.config
 
   # 在你的zsh配置里 source ~/.config/omz/omz.zsh (举例)
-  echo "source ~/.config/omz/omz.zsh" >> ~/.zshrc
+  echo "source ~/.config/omz.zsh" >> ~/.zshrc
 
   # 请务必安装fzf和lua 依赖
 ```
