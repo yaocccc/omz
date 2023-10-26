@@ -2,14 +2,14 @@
 
 * [o╦╗](#o)
 * [FUTURES](#futures)
-    * [USAGE](#usage)
-    * [UPDATE](#update)
-    * [FILE TREE](#file-tree)
-    * [REQUIRES](#requires)
-    * [CONFIGURATION](#configuration)
-    * [PLUGINS](#plugins)
-    * [贡献者](#贡献者)
-    * [Support: buy me a coffee](#support-buy-me-a-coffee)
+  * [USAGE](#usage)
+  * [UPDATE](#update)
+  * [FILE TREE](#file-tree)
+  * [REQUIRES](#requires)
+  * [CONFIGURATION](#configuration)
+  * [PLUGINS](#plugins)
+  * [贡献者](#贡献者)
+  * [Support: buy me a coffee](#support-buy-me-a-coffee)
 
 <!-- markdown-toc -->
 
@@ -33,6 +33,7 @@ fork自 oh my zsh，更纯净 更快速
 
 ```shell
   # 找一个地方clone本仓库 例如 ~/.config
+  mkdir -p ~/.config
   git clone https://github.com/yaocccc/omz ~/.config
 
   # 在你的zsh配置里 source ~/.config/omz/omz.zsh (举例)
