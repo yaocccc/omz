@@ -33,8 +33,7 @@ fork自 oh my zsh，更纯净 更快速
 
 ```shell
   # 找一个地方clone本仓库 例如 ~/.config
-  mkdir -p ~/.config
-  git clone https://github.com/yaocccc/omz ~/.config
+  git clone https://github.com/yaocccc/omz ~/.config/omz
 
   # 在你的zsh配置里 source ~/.config/omz/omz.zsh (举例)
   echo "source ~/.config/omz/omz.zsh" >> ~/.zshrc
