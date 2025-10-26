@@ -87,6 +87,27 @@
   builtin compadd -U -qS '' -R -ftb-remove-space ''
 }
 
+# try to start and stop fzf and ueberzugpp simultaneously
+-ftb-start-ueberzugpp() {
+	case "$(uname -a)" in
+		*Darwin*) ub_tmp_dir="$TMPDIR" ;;
+		*) ub_tmp_dir="/tmp" ;;
+	esac
+
+	if command -v ueberzugpp >/dev/null 2>&1; then
+		ueberzugpp layer --no-stdin -so x11 --pid-file "$UEBERZUGPP_PID_FILE"
+		ub_pid=$(cat "$UEBERZUGPP_PID_FILE")
+		export UEBERZUGPP_SOCKET="$ub_tmp_dir"/ueberzugpp-"$ub_pid".socket
+	fi
+}
+
+-ftb-stop-ueberzugpp() {
+	if [[ -n "$UEBERZUGPP_SOCKET" && -S "$UEBERZUGPP_SOCKET" ]]; then
+		ueberzugpp cmd -s "$UEBERZUGPP_SOCKET" -a "exit"
+		unset UEBERZUGPP_SOCKET
+	fi
+}
+
 # when insert multi results, a whitespace will be added to each result
 # remove left space of our fake result because I can't remove right space
 # FIXME: what if the left char is not whitespace: `echo $widgets[\t`
@@ -132,9 +153,11 @@
       -ftb-zstyle -s print-query print_query || print_query=alt-enter
       -ftb-zstyle -s accept-line accept_line
 
+			-ftb-start-ueberzugpp
       choices=("${(@f)"$(builtin print -rl -- $_ftb_headers $_ftb_complist | -ftb-fzf)"}")
       ret=$?
       # choices=(query_string expect_key returned_word)
+			-ftb-stop-ueberzugpp
 
       # insert query string directly
       if [[ $choices[2] == $print_query ]] || [[ -n $choices[1] && $#choices == 1 ]] ; then

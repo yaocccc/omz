@@ -1,4 +1,5 @@
 export OMZ=$(cd $(dirname $0);pwd)
+export UEBERZUGPP_PID_FILE=$OMZ/cache/ubpidfile
 source $OMZ/config/omz.zsh
 source $OMZ/config/git.zsh
 source $OMZ/config/fzf.zsh
