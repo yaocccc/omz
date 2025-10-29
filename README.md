@@ -159,6 +159,8 @@ _OMZ_APPLY_HISTORYBYFZF
 - [yaocccc](https://github.com/YichaoDeng)
 - [YichaoDeng](https://github.com/YichaoDeng)
   - [PR#1 更新gitlog的format格式](https://github.com/yaocccc/omz/pull/1)
+- [lazypool](https://github.com/lazypool)
+  - [PR#9 使用 ueberzugpp 重构图片预览功能](https://github.com/yaocccc/omz/pull/9)
 
 ## Support: buy me a coffee
 
