@@ -74,7 +74,7 @@ omz
 - fd
 - bat (可选 更好的文本预览效果)
 - exa (可选 更好的目录预览效果)
-- ueberzug (可选 可在x11终端下预览图片)
+- ueberzugpp (可选 可在终端下预览图片)
 
 ```plaintext
   请自行安装fd
