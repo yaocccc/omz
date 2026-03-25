@@ -1,3 +1,4 @@
+git config --global log.date "format:%Y/%m/%d %H:%M:%S"
 export GIT_TERMINAL_PROMPT=1
 
 # 可配置以下环境变量控制git log颜色
